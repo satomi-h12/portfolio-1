@@ -1,0 +1,724 @@
+/* 
+ #f9d182 whiteorange
+ #f6bb42 middle
+ #f2a405 orange
+ #70522f brown
+ #e3dccc lightgray
+*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-family: kepler-std, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6  {
+    font-family: 'Playfair Display', serif;
+  
+}
+h1 {
+    font-style: italic; 
+}
+
+/* start of header */
+header{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+header .userIcon{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .userIcon i{
+    color: #70522f;
+    font-size: 44px;
+    margin: 20px 0;
+}
+header .userIcon i:hover{
+    color: #f6bb42;
+}
+header .logo{
+    height: 100px;
+    width: 200px;
+    position: relative;
+    padding: 0 20px 0 40px;
+}
+header .logo img{
+    height: 100px;
+    width: auto;
+}
+header .logo img:hover{
+    border: 1px solid #70522f;
+}
+header .menu{
+    height: 100px;
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.shoppingCart{
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+.shoppingCart i{
+    color: #70522f;
+    font-size: 40px;
+    cursor: pointer;
+}
+.shoppingCart i:hover{
+    color: #f6bb42;
+}
+.shoppingCart span{
+    background-color: #e3dccc;
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    bottom: -12px;
+    border-radius: 50%;
+}
+.menuBox{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.menuBox div{
+    height: 8px;
+    width: 100%;
+    background-color: #70522f;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: all .5s ease-in-out;
+}
+.menuBox div:nth-child(1){
+    top: 0;
+}
+.menuBox div:nth-child(2){
+    top: 16px;
+}
+.menuBox div:nth-child(3){
+    top: 32px;
+}
+.menuBox .close {
+    background-color: #f6bb42;
+  }
+.menuBox .close:first-child{
+    top: 16px;
+    transform: rotate(135deg);
+}
+.menuBox .close:nth-child(2){
+    opacity: 0;
+}
+.menuBox .close:nth-child(3){
+    top: 16px;
+    transform: rotate(-135deg);
+}
+/* start of hamburger modal */
+.hamburgerModal{
+    width: 40%;
+    height: 100%;
+    color: #70522f;
+    border: 1px solid #70522f;
+    background-color: #e3dccc;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 2;
+    display: none;
+}
+.hamburgerModal ul{
+    padding: 10px 0;
+}
+.hamburgerModal ul li{
+    list-style: none;
+    padding: 15px 20px;
+}
+.hamburgerModal ul li a{
+    color: #70522f;
+    text-decoration: none;
+    font-weight: 800;
+}
+.hamburgerModal ul li a:hover{
+    color: #f6bb42;
+}
+.snsIconsMenu{
+    margin: 30px 0;
+    display: flex;
+    bottom: 100px;
+    justify-content: space-evenly;
+}
+.snsIconsMenu i{
+    color: #70522f;
+    font-size: 34px;
+}
+.snsIconsMenu i:hover{
+    color: #f6bb42;
+}
+/* start of user modal */
+.userModal{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #70522f;
+    background-color: #e3dccc;
+    position: fixed;
+    top: 100px;
+    z-index: 2;
+    overflow: scroll;
+    display: none;
+}
+.closeButton{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.closeButton button{
+    color: #70522f;
+    padding: 5px 7px;
+    font-weight: 900;
+}
+.userWindow{
+    display: flex;
+    justify-content: space-around;
+}
+.formBox{
+    height: 350px;
+    width: 40%;
+    padding: 50px 0;
+}
+.formBox h2{
+    color: #70522f;
+    border-bottom: 1px dashed #f6bb42;
+    text-align: center;
+    font-weight: 700;
+}
+.formBox input,
+.formBox label{
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+}
+.formBox button{
+    width: 50%;
+    color: #70522f;
+    background-color: #f9d182;
+    display: block;
+    margin: 30px auto;
+    padding: 5px 10px;
+    border-radius: 8%;
+}
+.formBox button:hover{
+    background-color: #70522f;
+    color: #e3dccc;
+    font-weight: 900;
+}
+.userModal hr{
+    height: 3px;
+    width: 80%;
+    background-color: #70522f;
+    margin: 10px auto;
+}
+.userModal p{
+    color: #70522f;
+    text-align: center;
+    font-style: italic;
+}
+.userModal p span{
+    color: #e3dccc;
+    background-color: #70522f;
+    padding: 3px;
+}
+/* start of cart modal */
+.cart{
+    height: 100%;
+    width: 100%;
+    background-color: #e3dccc;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    z-index: 2;
+    overflow: scroll;
+    display: none;
+}
+.cart h2{
+    color: #70522f;
+    text-shadow: 1px 1px 3px #70522f
+    margin: 20px 0;
+}
+.cart ul p{
+    text-decoration: underline;
+    font-weight: 100;
+    margin: 20px 0;
+}
+#checkout{
+    color: #70522f;
+    padding: 10px 20px;
+    font-weight: 800;
+    margin: 10px 0;
+    display: none;
+}
+#checkout:hover{
+    color: #f2a405;
+    border: 1px solid #70522f;
+    border-radius: 3px;
+}
+.cart ul li{
+    width: 70%;
+    border-bottom: 1px dotted #f6bb42;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.cart ul li img{
+    height: 300px;
+    /* width: 200px; */
+    要チェック
+    width: 50%;
+    object-fit: cover;
+}
+.cart ul li button{
+    height: 15px;
+    width: 15px;
+    color: #70522f;
+    border: 1px solid #70522f;
+    background-color: rgba(227, 220, 204, 0);
+    display: block;
+}
+.cartInfo{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cartInfo span{
+    color: #70522f;
+    padding: 5px;
+}
+.cartInfo .cartProduct{
+    text-decoration: underline;
+    font-style: italic;
+}
+.cartInfo .cartPrice{
+    font-size: 16px;
+    text-align: center;
+}
+/* start of main */
+main {
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+}
+main .mainText {
+    color: #362716;
+    background-color: rgba(227, 220, 204, 0.1);
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    padding: 30px;
+    opacity: 0.1;
+}
+.mainText h1 {
+    font-size: 40px;
+    text-shadow: 3px 1px 1px #e3dccc;
+}
+.slider {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    opacity: 0.1;
+}
+.slider img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+main button {
+    background-color: #e3dccc;
+    position: absolute;
+    top: 50%;
+    border: 1px solid #70522f;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+main button i {
+    color: #70522f;
+}  
+main button:active {
+    background-color: #f9d182;
+}
+#prevButton {
+    left: 2%;
+}
+#nextButton {
+    right: 2%;
+}
+.line{
+    margin: 110px 0 0;
+}
+/* start of setting */
+.setting{
+    text-align: center;
+}
+.setting h2{
+    color: #70522f;
+    font-weight: 700;
+    padding: 10px 0;
+    text-shadow: 1px 1px 3px #e3dccc;
+}
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+.category h3{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.category h3:hover{
+    color: #e3dccc;
+}
+.wideSetting{
+    height: 60px;
+    margin: 10px 0;
+}
+.wideSetting button{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(227, 220, 204, 0);
+    border: none;
+    margin: 0 20px;
+    padding: 3px;
+    cursor: pointer;
+}
+.wideSetting button:click{
+    border: 1px solid #e3dccc;
+}
+.wideSetting img{
+    height: 100%;
+    width: 100%;
+}
+/* start of gallery */
+.gallery{
+    overflow: scroll;
+    padding-bottom: 30px;
+}
+.contentHolder{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 35px;
+}
+/* two columns */
+.twoColumn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 35px;
+    column-gap: 10px;
+}
+.twoColumn .itemHolder img{
+    height: 250px;
+    width: 70%;
+    object-fit: cover;
+}
+.twoColumn .tops img{
+    object-position: center 35%;
+}
+.twoColumn .pants img{
+    object-position: center 70%;
+}
+.twoColumn .shoes img{
+    object-position: center 85%;
+}
+/* end of two column settings */
+
+.itemBox{
+   position: relative; 
+}
+.itemHolder{
+    text-align: center;
+}
+.itemHolder img{
+    height: 280px;
+    width: 225px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0;
+}
+.itemHolder span{
+    text-decoration: underline;
+    font-style: italic;
+}
+.cartButton button{
+    width: 50%;
+    color: #70522f;
+    background-color: rgba(249, 209, 130, .75);
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 3px;
+    display: block;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 1px #70522f;
+}
+.cartButton button:active{
+    background-color: #f6bb42;
+}
+/* start of info modal */
+.infoWindow{
+    height: 500px;
+    width: 80%;
+    background-color: #e3dccc;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    z-index: 2;
+    display: none;
+}
+.infoWindow .imageContent{
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoWindow .imageContent img{
+    height: 400px;
+    width: 90%;
+    object-fit: contain;
+}
+.infoWindow .textContent{
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.infoWindow .textContent h2{
+    margin: 10px 0;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: 1px 1px 3px #70522f;
+}
+.infoWindow .textContent h3{
+    color:  #f6bb42;
+    text-shadow: 2px 1px 2px #70522f;
+    font-size: 24px;
+    text-decoration: underline;
+}
+.infoWindow .textContent p{
+    margin: 20px 0;
+}
+/* start of footer */
+footer{
+    height: 200px;
+    background-color: #e3dccc;
+    text-align: center;
+    margin-top: 100px;
+}
+footer .snsIcons{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+footer .snsIcons i{
+    color: #70522f;
+    font-size: 50px;
+    margin: 10px;
+}
+footer .snsIcons i:hover{
+    color: #f2a405;
+}
+footer .menu{
+    margin: 10px 0;
+    padding: 10px;
+}
+footer .menu a{
+    color: #f2a405;
+    text-decoration: none;
+    margin: 10px;
+}
+footer .menu a:hover{
+    color: #f9d182; 
+    background-color: #70522f;
+}
+footer p{
+    color: #70522f;
+}
+.top{
+    color: #70522f;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.top button i{
+    color: rgba(112, 82, 47, .5);
+    font-size: 36px;
+    box-shadow: 0px 3px 3px 0px #70522f;
+}
+.top button i:hover{
+    color: #f9d182;
+}
+
+
+@media all and (max-width:1024px){
+    .twoColumn .itemHolder img{
+        height: 250px;
+        width: 90%;
+    }
+}
+@media all and (max-width:768px){
+    .contentHolder{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+    }
+    .twoColumn{
+        row-gap: 30px;
+        column-gap: 10px;
+    }
+    .twoColumn .itemHolder img{
+        height: 250px;
+        width: 100%;
+    }
+    .infoWindow{
+        width: 100%;
+        left: 0;
+    }
+    .cartButton{
+        right: 3%;
+        bottom: 15%;
+    }
+}
+@media all and (max-width:425px){
+    .contentHolder{
+        display: flex;
+        flex-direction: column;
+    }
+    .itemHolder img{
+        height: 350px;
+        width: 250px;
+    }
+    .infoWindow{
+        height: 650px;
+        overflow: scroll;
+        padding: 15px 0;
+        top: 20%;
+    }
+    .infoWindow .imageContent{
+        height: auto;
+        width: 100%;
+    }
+    .infoWindow .textContent{
+        height: auto;
+        width: 100%;
+    }
+    .cart ul li {
+        width: 100%;
+    }
+    .modal {
+    width: 50%;
+    }
+    .entireModal {
+    height: auto;
+    padding-bottom: 20px;
+    }
+    .userModal{
+    padding-bottom: 30px;
+    }
+    .userWindow {
+    flex-direction: column;
+    align-items: center;
+    }
+    .formBox {
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    }
+}
+@media all and (max-width:375px){
+    .hamburgerModal{
+        width: 60%;
+    }
+    .cart ul li {
+        display: grid;
+        position: relative;
+    }
+    .cart ul li img{
+        width: 100%;
+    }
+    .cartInfo{
+        width: 100%;
+    }
+    .cart ul li button{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+}
+@media all and (max-width:320px){
+    header{
+        height: 80px;
+        padding: 0 10px;
+        justify-content: center;
+    }
+    header .userIcon{
+        height: 80px;
+        width: auto;
+    }
+    header .logo{
+        height: 80px;
+        width: auto;
+        padding: 0 0 0 30px;
+    }
+    header .logo img{
+        height: 100%;
+    }
+    header .hamburgerMenu{
+        height: 80px;
+        width: auto;
+    }
+    .shoppingCart{
+        padding-right: 50px;
+    }
+    .category{
+       display: grid;
+       row-gap: 10px;
+    }
+    .userModal p a{
+        display: block;
+    }
+}
