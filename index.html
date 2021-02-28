@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Your Favorite Item | Portfolio by Satomi Homma</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>HOME | FuF SHop</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bca2qgj.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/071db74256.js" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery-3.5.1.js"></script>
 </head>
@@ -14,13 +15,10 @@
             <i class="fas fa-user-circle"></i>
         </div>
         <div class="logo">
-            <a href="#"><img src="./assets/images/1_logo_opacity.png" alt=""></a>
+           <a href="#"><img src="./assets/images/logo-opacitybg.png" alt=""></a>
         </div>
-        <div class="menu">
-            <div class="shoppingCart">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="itemNumber">0</span>
-            </div>
+        <div class="hamburgerMenu">
+            <!-- <i class="fas fa-bars"></i>   -->
             <div class="menuBox">
                 <div></div>
                 <div></div>
@@ -32,15 +30,24 @@
     <div class="hamburgerModal">
         <div class="modalContent">
             <ul>
-                <li><a href="#top">HOME</a></li>
-                <li><a href="#gallery">PRODUCT</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li>
+                    <a href="./product.html">PRODUCT</a>
+                    <ul id="productMenu">
+                        <li><a href="./product.html">ALL PRODUCTS</a></li>
+                        <li><a href="./product.html">TOPS</a></li>
+                        <li><a href="./product.html">PANTS</a></li>
+                        <li><a href="./product.html">SHOES</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
             <hr>
             <div class="snsIconsMenu">
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram-square"></i>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-line"></i>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-line"></i></a>
             </div>
         </div>
     </div>
@@ -74,28 +81,9 @@
             </div>
         </div>
         <hr>
-        <p>If you forget your password, let us know. Please contact us from the link : <span>Contact Us</span></p>
+        <p>If you forget your password, let us know. Please contact us from the link : <a href="./contact.html">Contact Us</a></p>
     </div>
-
-    <div class="cart">
-        <h2>SHOPPING CART</h2>
-        <div class="closeButton">
-            <button type="button">×</button>
-        </div>
-        <ul>
-            <p>Your cart is empty.</p>
-            <!-- <li id="productList">
-                <img src="./assets/images/pants-01.jpg" alt="">
-                <div class="cartInfo">
-                    <span class="cartProduct">name of product</span>
-                    <span class="cartPrice">price of product</span>
-                </div>
-                <button>×</button>
-            </li> -->
-        </ul>
-        <button id="checkout">CHECKOUT</button>
-    </div>
-
+    
     <main>  
         <div class="slider">
             <img src="./assets/images/slider-02.jpg" alt="">
@@ -104,313 +92,179 @@
             <img src="./assets/images/slider-04.jpg" alt="image of slider">
         </div>
         <div class="mainText">
-            <h1>FIND YOUR FAVORITE ITEM</h1>
+            <h1>FIND YOUR FAVORITE</h1>
             <span>MAKE YOUR DAYS BETTER</span>
-            <H3>WINTER COLLECTION 2020</H3>
+            <H3>FALL COLLECTION 2020</H3>
         </div>
-        <button id="prevButton">
-            <i class="fas fa-arrow-alt-circle-left"></i>
-        </button>
-        <button id="nextButton">
-            <i class="fas fa-arrow-alt-circle-right"></i>
-        </button>
+        <button id="prevButton"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <button id="nextButton"><i class="fas fa-arrow-alt-circle-right"></i></button>
     </main>
 
-    <hr class="line" >
-
-    <section class="setting">
-        <h2 id="mainText">ALL PRODUCTS</h2>
-        <div class="category">
-            <h3 id="allProduct">ALL PRODUCTS</h3>
-            <h3 id="tops">TOPS</h3>
-            <h3 id="pants">PANTS</h3>
-            <h3 id="shoes">SHOES</h3>
-        </div>
-        <div class="wideSetting">
-            <button id="wideButton">
-                <img src="./assets/images/wide-button.png" alt="">
-            </button>
-            <button id="smallButton">
-                <img src="./assets/images/narrow-button.png" alt="">
-            </button>
+    <section class="gallery newItem">
+        <h2 class="title">NEW ITEM</h2>
+        <div class="outerBox">
+            <div class="contentHolder newContentHolder">
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-01.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-02.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-03.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-04.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-05.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-06.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-07.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-08.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/new-item-09.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia!</p>
+                    <span>$45.00</span>
+                </div>
+            </div>
+            <button class="prev"><i class="fas fa-angle-left"></i></button>
+            <button class="next"><i class="fas fa-angle-right"></i></button>
         </div>
     </section>
-    
-    <hr>
 
-    <main class="gallery" id="gallery">
-        <div class="contentHolder">
-            <div class="itemBox tops" >
-                <div class="itemHolder" id="1">
-                    <img src="./assets/images/slider-01.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-            </div>
-           <div class="itemBox pants">
-               <div class="itemHolder" id="2">
-                <img src="./assets/images/slider-01.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div>
-           <div class="itemBox shoes">
-                <div class="itemHolder" id="3">
-                    <img src="" alt="">
-                <h5>NAME OF PRODUCT</h5>
-                <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div>
-           <!-- <div class="itemBox tops">
-               <div class="itemHolder" id="4">
-                    <img src="./assets/images/tops-02.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div>
-           <div class="itemBox pants">
-               <div class="itemHolder" id="5">
-                    <img src="./assets/images/pants-02.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="6">
-                    <img src="./assets/images/shoes-02.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="7">
-                    <img src="./assets/images/tops-03.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="8">
-                    <img src="./assets/images/pants-03.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="9">
-                    <img src="./assets/images/shoes-03.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="10">
-                    <img src="./assets/images/tops-04.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="11">
-                    <img src="./assets/images/pants-04.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="12">
-                    <img src="./assets/images/shoes-04.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="13">
-                    <img src="./assets/images/tops-05.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="14">
-                    <img src="./assets/images/pants-05.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder"id="15">
-                    <img src="./assets/images/shoes-05.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="16">
-                    <img src="./assets/images/tops-06.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="17">
-                    <img src="./assets/images/pants-06.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="18">
-                    <img src="./assets/images/shoes-06.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="19">
-                    <img src="./assets/images/tops-07.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="20">
-                    <img src="./assets/images/pants-07.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="21">
-                    <img src="./assets/images/shoes-07.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox tops">
-               <div class="itemHolder" id="22">
-                    <img src="./assets/images/tops-08.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox pants">
-               <div class="itemHolder" id="23">
-                    <img src="./assets/images/pants-08.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div> 
-           <div class="itemBox shoes">
-               <div class="itemHolder" id="24">
-                    <img src="./assets/images/shoes-08.jpg" alt="">
-                    <h5>NAME OF PRODUCT</h5>
-                    <span>$50.75</span>
-                </div>
-                <div class="cartButton">
-                    <button>ADD TO CART</button>
-                </div>
-           </div>  -->
+    <section class="product">
+        <img src="./assets/images/section-01.jpg" alt="">
+        <div class="textHolder">
+            <h3>FIND YOUR FAVORITE ITEM</h3>
+            <p>Explore to find your favorite item. Fashion makes you feel good! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis dolores mollitia ex tempora doloribus eveniet!</p>
+            <a href="./product.html">FIND YOUR ITEM</a>
         </div>
-        
-    </main>
+    </section>
 
-    <div class="infoWindow">
-        <div class="imageContent">
-            <img src="" alt="" id="infoImage">
-        </div>
-        <dic class="textContent">
-            <div class="closeButton infoClose">
-                <button type="button">×</button>
+    <section class="gallery saleItem">
+        <h2 class="title">SALE</h2>
+        <div class="outerBox">
+            <div class="contentHolder saleContentHolder">
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-01.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-02.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-03.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-04.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-05.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-06.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>    
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-07.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>    
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-08.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>    
+                <div class="itemHolder">
+                    <img src="./assets/images/sale-item-09.jpg" alt="">
+                    <span class="pName">Product name</span>
+                    <span>$40.5</span>
+                    <span>$25.5</span>
+                </div>    
             </div>
-            <h2 id="productName">product name</h2>
-            <h3 id="price">price</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et mollitia quidem quo assumenda quos magnam qui numquam aut minus quam in commodi, eaque saepe beatae! Consequatur veniam explicabo cum nam.</p>
-        </dic>
-        
-    </div>
+            <button class="prev"><i class="fas fa-angle-left"></i></button>
+            <button class="next"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2 class="title">ABOUT</h2>
+        <p>
+            <i>-FuF SHop has started in 2020</i>
+            <br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, sit, rem esse dolores quia perspiciatis suscipit aliquid ratione natus pariatur quisquam impedit dolorem ut culpa soluta consequuntur necessitatibus porro nam.
+            <br>
+            <br>
+            <br>
+            <i>-Our princilpe is</i>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sequi laudantium necessitatibus accusantium esse itaque eligendi expedita accusamus vel maxime est officia, magnam ratione non explicabo corporis incidunt perferendis laboriosam? </p>
+        <a href="">Read More</a>
+    </section>
 
     <footer>
         <div class="snsIcons">
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-line"></i>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-line"></i></a>
         </div>
         <div class="menu">
-            <a href="#top">HOME</a>
-            <a href="#gallery">PRODUCTS</a>
+            <a href="#">HOME</a>
+            <a href="./product.html">PRODUCTS</a>
+            <a href="./contact.html">CONTACT US</a>
         </div>
-        <p>2020 copyright ©️ FuFi SHop</p>
+        <p>2020 copyright ©️ FuF SHop</p>
         <div class="top">
             <button id="topButton">
                 <i class="fas fa-arrow-circle-up"></i>
@@ -418,7 +272,7 @@
         </div>
     </footer>
 
-
-    <script src="./assets/js/fashion.js"></script>
+    <script src="./assets/js/index.js">
+    </script>
 </body>
 </html>
