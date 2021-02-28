@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT | FuF SHop</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bca2qgj.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <script src="https://kit.fontawesome.com/071db74256.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="userIcon">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img src="./assets/images/logo-opacitybg.png" alt=""></a>
+        </div>
+        <div class="hamburgerMenu">
+            <div class="shoppingCart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="itemNumber">0</span>
+            </div>
+            <!-- <i class="fas fa-bars"></i>   -->
+            <div class="menuBox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hamburgerModal">
+        <div class="modalContent">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li>
+                    <a href="./product.html">PRODUCT</a>
+                    <ul id="productMenu">
+                        <li><a href="./product.html">ALL PRODUCTS</a></li>
+                        <li><a href="./product.html">TOPS</a></li>
+                        <li><a href="./product.html">PANTS</a></li>
+                        <li><a href="./product.html">SHOES</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+            <hr>
+            <div class="snsIconsMenu">
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-line"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="userModal">
+        <div class="closeButton userWindowClose">
+            <button type="button">×</button>
+        </div>
+        <div class="userWindow">
+            <div class="formBox signIn">
+                <h2>SIGN IN</h2>
+                <form onsubmit="event.preventDefault()">
+                    <label for="email">E-MAIL</label>
+                    <input type="text" name="email">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password">
+                    <button type="button" id="signInBtn">SIGN IN</button>
+                </form>
+            </div>
+            <div class=" formBox createAcount">
+                <h2>CREATE AN ACCOUNT</h2>
+                <form onsubmit="event.preventDefault()">
+                    <label for="name">NAME</label>
+                    <input type="text" name="name">
+                    <label for="email">E-MAIL</label>
+                    <input type="text" name="email" id="createEmail">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password">
+                    <button type="button" id="createBtn">CREATE</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <p>If you forget your password, let us know. Please contact us from the link : <a href="./contact.html">Contact Us</a></p>
+    </div>
+
+    <div class="cart">
+        <h2>SHOPPING CART</h2>
+        <div class="closeButton">
+            <button type="button">×</button>
+        </div>
+        <ul>
+            <p>Your cart is empty.</p>
+            <!-- <li id="productList">
+                <img src="./assets/images/pants-01.jpg" alt="">
+                <div class="cartInfo">
+                    <span class="cartProduct">name of product</span>
+                    <span class="cartPrice">price of product</span>
+                </div>
+                <button>×</button>
+            </li>
+            <li id="productList">
+                <img src="./assets/images/pants-01.jpg" alt="">
+                <div class="cartInfo">
+                    <span class="cartProduct">name of product</span>
+                    <span class="cartPrice">price of product</span>
+                </div>
+                <button>×</button>
+            </li>
+            <li id="productList">
+                <img src="./assets/images/pants-01.jpg" alt="">
+                <div class="cartInfo">
+                    <span class="cartProduct">name of product</span>
+                    <span class="cartPrice">price of product</span>
+                </div>
+                <button>×</button>
+            </li> -->
+        </ul>
+        <button id="checkout">CHECKOUT</button>
+    </div>
+
+    <hr>
+
+    <section class="setting">
+        <h2 id="mainText">ALL PRODUCTS</h2>
+        <div class="category">
+            <h3 id="allProduct">ALL PRODUCTS</h3>
+            <h3 id="tops">TOPS</h3>
+            <h3 id="pants">PANTS</h3>
+            <h3 id="shoes">SHOES</h3>
+        </div>
+        <div class="wideSetting">
+            <button id="wideButton">
+                <img src="./assets/images/wide-button.png" alt="">
+            </button>
+            <button id="smallButton">
+                <img src="./assets/images/narrow-button.png" alt="">
+            </button>
+        </div>
+    </section>
+    
+    <hr>
+
+    <main class="gallery">
+        <div class="contentHolder">
+            <div class="itemBox tops" >
+                <div class="itemHolder" id="1">
+                    <img src="./assets/images/tops-01.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+           <div class="itemBox pants">
+               <div class="itemHolder" id="2">
+                    <img src="./assets/images/pants-01.jpg" alt="" style="object-fit: center 65%;">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div>
+           <div class="itemBox shoes">
+                <div class="itemHolder" id="3">
+                <img src="./assets/images/shoes-01.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div>
+           <div class="itemBox tops">
+               <div class="itemHolder" id="4">
+                    <img src="./assets/images/tops-02.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div>
+           <div class="itemBox pants">
+               <div class="itemHolder" id="5">
+                    <img src="./assets/images/pants-02.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="6">
+                    <img src="./assets/images/shoes-02.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="7">
+                    <img src="./assets/images/tops-03.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="8">
+                    <img src="./assets/images/pants-03.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="9">
+                    <img src="./assets/images/shoes-03.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="10">
+                    <img src="./assets/images/tops-04.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="11">
+                    <img src="./assets/images/pants-04.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="12">
+                    <img src="./assets/images/shoes-04.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="13">
+                    <img src="./assets/images/tops-05.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="14">
+                    <img src="./assets/images/pants-05.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder"id="15">
+                    <img src="./assets/images/shoes-05.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="16">
+                    <img src="./assets/images/tops-06.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="17">
+                    <img src="./assets/images/pants-06.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="18">
+                    <img src="./assets/images/shoes-06.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="19">
+                    <img src="./assets/images/tops-07.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="20">
+                    <img src="./assets/images/pants-07.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="21">
+                    <img src="./assets/images/shoes-07.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox tops">
+               <div class="itemHolder" id="22">
+                    <img src="./assets/images/tops-08.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox pants">
+               <div class="itemHolder" id="23">
+                    <img src="./assets/images/pants-08.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+           <div class="itemBox shoes">
+               <div class="itemHolder" id="24">
+                    <img src="./assets/images/shoes-08.jpg" alt="">
+                    <h5>NAME OF PRODUCT</h5>
+                    <span>$50.75</span>
+                </div>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+           </div> 
+
+            
+            <!-- <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-02.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-03.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-03.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-03.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-04.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-04.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-04.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-05.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-05.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-05.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-06.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-06.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-06.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-07.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-07.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-07.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder tops">
+                <img src="./assets/images/tops-08.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder pants">
+                <img src="./assets/images/pants-08.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div>
+            <div class="itemHolder shoes">
+                <img src="./assets/images/shoes-08.jpg" alt="">
+                <h5>NAME OF PRODUCT</h5>
+                <span>$50.75</span>
+                <div class="cartButton">
+                    <button class="addCartButton"><i class="fas fa-shopping-cart"></i></button>
+                    <span>ADD TO CART</span>
+                </div>
+            </div> -->
+        </div>
+        
+    </main>
+
+    <div class="infoWindow">
+        <div class="imageContent">
+            <img src="./assets/images/new-item-01.jpg" alt="" id="infoImage">
+        </div>
+        <dic class="textContent">
+            <div class="closeButton infoClose">
+                <button type="button">×</button>
+            </div>
+            <h2 id="productName">product name</h2>
+            <h3 id="price">price</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et mollitia quidem quo assumenda quos magnam qui numquam aut minus quam in commodi, eaque saepe beatae! Consequatur veniam explicabo cum nam.</p>
+        </dic>
+        
+    </div>
+
+    <footer>
+        <div class="snsIcons">
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-line"></i></a>
+        </div>
+        <div class="menu">
+            <a href="./index.html">HOME</a>
+            <a href="#">PRODUCTS</a>
+            <a href="./contact.html">CONTACT US</a>
+        </div>
+        <p>2020 copyright ©️ FuF SHop</p>
+        <div class="top">
+            <button id="topButton">
+                <i class="fas fa-arrow-circle-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/product.js"></script>
+</body>
+</html>
