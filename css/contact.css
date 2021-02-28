@@ -1,0 +1,518 @@
+/* 
+ #f9d182 whiteorange
+ #f6bb42 middle
+ #f2a405 orange
+ #70522f brown
+ #e3dccc lightgray
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: kepler-std, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    /* padding: 1em; */
+    /* margin: 1em; */
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6  {
+    font-family: 'Playfair Display', serif;
+  
+}
+
+h1 {
+    font-style: italic; 
+}
+
+header{
+    /* border: 1px solid yellow; */
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .userIcon{
+    /* border: 1px solid orange; */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .userIcon i{
+    /* border: 1px solid yellow; */
+    font-size: 44px;
+    margin: 20px 0;
+    color: #70522f;
+}
+
+header .userIcon i:hover{
+    color: #f6bb42;
+}
+
+header .logo{
+    /* border: 1px solid red; */
+    height: 100px;
+    width: 200px;
+    position: relative;
+    padding: 0 20px;
+}
+
+header .logo img{
+    height: 100px;
+    width: auto;
+    /* border: 1px solid black; */
+}
+
+header .logo img:hover{
+    border: 1px solid #70522f;
+}
+
+header .hamburgerMenu{
+    /* border: 1px solid green; */
+    height: 100px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBox{
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.menuBox div{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #70522f;
+    height: 8px;
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: all .5s ease-in-out;
+}
+
+.menuBox div:nth-child(1){
+    top: 0;
+}
+.menuBox div:nth-child(2){
+    top: 16px;
+}
+.menuBox div:nth-child(3){
+    top: 32px;
+}
+
+.menuBox .close {
+    background-color: #f6bb42;
+  }
+.menuBox .close:first-child{
+    top: 16px;
+    transform: rotate(135deg);
+}
+.menuBox .close:nth-child(2){
+    opacity: 0;
+}
+.menuBox .close:nth-child(3){
+    top: 16px;
+    transform: rotate(-135deg);
+}
+
+/* header .hamburgerMenu{
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+header .hamburgerMenu i{
+    border: 1px solid yellow;
+    font-size: 50px;
+    margin: 20px 0;
+    color: #70522f;
+}
+
+header .hamburgerMenu i:hover{
+    color: #f6bb42;
+} */
+
+.hamburgerModal{
+    border: 1px solid #70522f;
+    background-color: #e3dccc;
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    color: #70522f;
+    display: none;
+}
+.hamburgerModal ul{
+    /* border: 1px solid yellow; */
+    padding: 10px 0;
+}
+.hamburgerModal ul li{
+    /* border: 2px solid #f2a405; */
+    list-style: none;
+    padding: 15px 20px;
+}
+.hamburgerModal ul li a{
+    color: #70522f;
+    text-decoration: none;
+    font-weight: 800;
+}
+.hamburgerModal ul li a:hover{
+    color: #f6bb42;
+}
+#productMenu{
+    text-decoration: underline;
+}
+#productMenu:hover{
+    color: #f9d182;
+}
+#productMenu li{
+    padding: 10px 0 10px 15px;
+}
+#productMenu li a{
+    font-weight: 400;
+    font-size: 14px;
+}
+.snsIconsMenu{
+    margin: 30px 0;
+    /* position: absolute; */
+    bottom: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.snsIconsMenu a i{
+    color: #70522f;
+    font-size: 34px;
+}
+.snsIconsMenu a i:hover{
+    color: #f6bb42;
+}
+
+.userModal{
+    border: 2px solid #70522f;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #e3dccc;
+    display: none;
+    z-index: 10;
+    top: 115px;
+}
+
+.closeButton{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.closeButton button{
+    padding: 5px 7px;
+    color: #70522f;
+    font-weight: 900;
+}
+
+.userWindow{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.formBox{
+    /* border: 1px solid yellow; */
+    width: 40%;
+    height: 350px;
+    padding: 50px 0;
+}
+
+.formBox h2{
+    text-align: center;
+    color: #70522f;
+    font-weight: 700;
+    border-bottom: 1px dashed #f6bb42;
+}
+
+.formBox input,
+.formBox label{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.formBox button{
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+    padding: 5px 10px;
+    background-color: #f9d182;
+    color: #70522f;
+    border-radius: 8%;
+}
+.formBox button:hover{
+    background-color: #70522f;
+    color: #e3dccc;
+    font-weight: 900;
+}
+
+.userModal hr{
+    margin: 10px auto;
+    width: 80%;
+    height: 3px;
+    background-color: #70522f;
+}
+
+.userModal p{
+    text-align: center;
+    font-style: italic;
+    color: #70522f;
+}
+
+.userModal p a{
+    background-color: #70522f;
+    color: #e3dccc;
+    padding: 3px;
+}
+
+.sectionTitle{
+    text-align: center;
+    /* border: 1px solid pink; */
+    padding: 20px 0;
+    background-color: white;
+}
+
+.office{
+    /* border: 1px solid blue; */
+    background-color: #e3dccc;
+}
+
+.office img{
+    /* border: 1px solid red; */
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #e3dccc;
+}
+
+.info{
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e3dccc;
+    padding: 10px 5px;
+}
+
+.info div{
+    /* border: 1px solid yellowgreen; */
+    width: 300px;
+    height: auto;
+    text-align: center;
+}
+
+.info div h4{
+    font-size: 24px;
+}
+
+.info div span{
+    display: inline-block;
+    margin: 10px;
+    font-style: italic;
+}
+
+.contact{
+    /* border: 1px solid red; */
+    padding: 20px 0;
+}
+
+.contact form{
+    /* border: 1px solid yellowgreen; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact form label,
+.contact form input,
+.contact form textarea{
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+.contact form input,
+.contact form textarea{
+    margin-bottom: 20px;
+}
+
+.contact form input[type="button"]{
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto 15px;
+    
+    letter-spacing: 3px;
+    background-color: #70522f;
+    color: #e3dccc;
+    border-radius: 3%;
+    background-color: #f9d182;
+    color: #70522f;
+}
+
+.contact form input[type="button"]:hover{
+    background-color: #f6bb42;
+    color: #70522f;
+    color: #f2a405;
+    background-color: #70522f;
+    font-weight: 900;
+}
+
+.contact form input:focus,
+.contact form textarea:focus{
+    background-color: #e3dccc;
+}
+
+footer{
+    /* border: 1px solid lightslategray; */
+    height: 200px;
+    text-align: center;
+    background-color: #e3dccc;
+}
+
+footer .snsIcons{
+    padding-top: 15px;
+    /* border: 1px solid lightskyblue; */
+    display: flex;
+    justify-content: center;
+}
+
+footer .snsIcons a i{
+    /* border: 1px solid burlywood; */
+    margin: 10px;
+    font-size: 50px;
+    color: #70522f;
+}
+
+footer .snsIcons a i:hover{
+    color: #f2a405;
+    font-size: 55px;
+}
+
+footer .menu{
+    /* border: 1px solid darkorange; */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer .menu a{
+    /* border: 1px solid yellow; */
+    margin: 10px;
+    color: #f2a405;
+    text-decoration: none;
+}
+
+footer .menu a:hover{
+    color: #f9d182; 
+    background-color: #70522f;
+}
+
+footer p{
+    color: #70522f;
+}
+
+.top{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    padding: 5px;
+    color: #70522f;
+    border-radius: 10px;
+}
+
+.top button i{
+    font-size: 36px;
+    color: rgba(112, 82, 47, .5);
+    box-shadow: 0px 3px 3px 0px #70522f;
+}
+
+.top button i:hover{
+    color: #f9d182;
+}
+
+@media all and (max-width:768px){
+    .info{
+        flex-direction: column;
+    }
+    .info div{
+        width: 100%;
+    }
+}
+@media all and (max-width:425px){
+    .office img {
+        width: 100%;
+        height: 300px;
+    }
+    .info div h4{
+        font-size: 18px;
+    }
+    .modal {
+    width: 50%;
+    }
+    .entireModal {
+    height: auto;
+    padding-bottom: 20px;
+    }
+    .userModal{
+    padding-bottom: 30px;
+    }
+    .userWindow {
+    flex-direction: column;
+    align-items: center;
+    }
+    .formBox {
+    padding: 30px;
+    height: auto;
+    width: 100%;
+    }
+}
+@media all and (max-width:375px){
+    .office img{
+        height: 250px;
+    }
+    .hamburgerModal{
+        width: 60%;
+    }
+}
+@media all and (max-width:320px){
+    .office img{
+        height: 250px;
+    }
+    .userModal p a{
+        display: block;
+    }
+}
