@@ -1,0 +1,823 @@
+/* 
+ #f9d182 whiteorange
+ #f6bb42 middle
+ #f2a405 orange
+ #70522f brown
+ #e3dccc lightgray
+*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: kepler-std, serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 1rem;
+    padding: 1em;
+    margin: 1em; */
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6  {
+    font-family: 'Playfair Display', serif;
+  
+}
+
+h1 {
+    font-style: italic; 
+}
+
+header{
+    /* border: 1px solid yellow; */
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .userIcon{
+    /* border: 1px solid orange; */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .userIcon i{
+    /* border: 1px solid yellow; */
+    font-size: 44px;
+    margin: 20px 0;
+    color: #70522f;
+}
+
+header .userIcon i:hover{
+    color: #f6bb42;
+}
+
+header .logo{
+    /* border: 1px solid red; */
+    height: 100px;
+    width: 200px;
+    position: relative;
+    padding: 0 20px 0 40px;
+}
+
+header .logo img{
+    height: 100px;
+    width: auto;
+    /* border: 1px solid black; */
+}
+
+header .logo img:hover{
+    border: 1px solid #70522f;
+}
+
+header .hamburgerMenu{
+    /* border: 1px solid green; */
+    height: 100px;
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shoppingCart{
+    /* border: 1px solid orange; */
+    width: 40px;
+    height: 40px;
+    position: relative;
+    /* position: fixed;
+    z-index: 30;
+    right: 130px; */
+}
+
+.shoppingCart i{
+    font-size: 40px;
+    color: #70522f;
+    cursor: pointer;
+}
+
+.shoppingCart i:hover{
+    color: #f6bb42;
+}
+
+.shoppingCart span{
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    bottom: -12px;
+    background-color: #e3dccc;
+    border-radius: 50%;
+}
+
+.menuBox{
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+    position: relative;
+    cursor: pointer;
+}
+
+.menuBox div{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #70522f;
+    height: 8px;
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: all .5s ease-in-out;
+}
+
+.menuBox div:nth-child(1){
+    top: 0;
+}
+.menuBox div:nth-child(2){
+    top: 16px;
+}
+.menuBox div:nth-child(3){
+    top: 32px;
+}
+
+.menuBox .close {
+    background-color: #f6bb42;
+  }
+.menuBox .close:first-child{
+    top: 16px;
+    transform: rotate(135deg);
+}
+.menuBox .close:nth-child(2){
+    opacity: 0;
+}
+.menuBox .close:nth-child(3){
+    top: 16px;
+    transform: rotate(-135deg);
+}
+/* header .hamburgerMenu i{
+    border: 1px solid yellow;
+    font-size: 50px;
+    margin: 20px 0;
+    color: #70522f;
+}
+
+header .hamburgerMenu i:hover{
+    color: #f6bb42;
+} */
+
+.hamburgerModal{
+    border: 1px solid #70522f;
+    background-color: #e3dccc;
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    color: #70522f;
+    display: none;
+}
+.hamburgerModal ul{
+    /* border: 1px solid yellow; */
+    padding: 10px 0;
+}
+.hamburgerModal ul li{
+    /* border: 2px solid #f2a405; */
+    list-style: none;
+    padding: 15px 20px;
+}
+.hamburgerModal ul li a{
+    color: #70522f;
+    text-decoration: none;
+    font-weight: 800;
+}
+.hamburgerModal ul li a:hover{
+    color: #f6bb42;
+}
+#productMenu{
+    text-decoration: underline;
+}
+#productMenu:hover{
+    color: #f9d182;
+}
+#productMenu li{
+    padding: 10px 0 10px 15px;
+}
+#productMenu li a{
+    font-weight: 400;
+    font-size: 14px;
+}
+.snsIconsMenu{
+    margin: 30px 0;
+    /* position: absolute; */
+    bottom: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.snsIconsMenu a i{
+    color: #70522f;
+    font-size: 34px;
+}
+.snsIconsMenu a i:hover{
+    color: #f6bb42;
+}
+
+.userModal{
+    border: 2px solid #70522f;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #e3dccc;
+    display: none;
+    z-index: 10;
+    top: 115px;
+}
+
+.closeButton{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.closeButton button{
+    padding: 5px 7px;
+    color: #70522f;
+    font-weight: 900;
+}
+
+.userWindow{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.formBox{
+    /* border: 1px solid yellow; */
+    width: 40%;
+    height: 350px;
+    padding: 50px 0;
+}
+
+.formBox h2{
+    text-align: center;
+    color: #70522f;
+    font-weight: 700;
+    border-bottom: 1px dashed #f6bb42;
+}
+
+.formBox input,
+.formBox label{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.formBox button{
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+    padding: 5px 10px;
+    background-color: #f9d182;
+    color: #70522f;
+    border-radius: 8%;
+}
+.formBox button:hover{
+    background-color: #70522f;
+    color: #e3dccc;
+    font-weight: 900;
+}
+
+.userModal hr{
+    margin: 10px auto;
+    width: 80%;
+    height: 3px;
+    background-color: #70522f;
+}
+
+.userModal p{
+    text-align: center;
+    font-style: italic;
+    color: #70522f;
+}
+
+.userModal p a{
+    background-color: #70522f;
+    color: #e3dccc;
+    padding: 3px;
+}
+
+.cart{
+    background-color: #e3dccc;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    overflow: scroll;
+}
+
+.cart h2{
+    margin: 20px 0;
+    color: #70522f;
+    text-shadow: 1px 1px 3px #70522f
+}
+
+.cart ul p{
+    text-decoration: underline;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+#checkout{
+    padding: 10px 20px;
+    font-weight: 800;
+    color: #70522f;
+    margin: 10px 0;
+    display: none;
+}
+
+#checkout:hover{
+    border: 1px solid #70522f;
+    border-radius: 3px;
+    color: #f2a405;
+}
+
+
+.cart ul li{
+    border-bottom: 1px dotted #f6bb42;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    width: 70%;
+    margin: 0 auto;
+}
+.cart ul li img{
+    /* border: 1px solid yellow; */
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    width: 50%;
+}
+
+.cart ul li button{
+    display: block;
+    width: 15px;
+    height: 15px;
+    color: #70522f;
+    border: 1px solid #70522f;
+    background-color: rgba(227, 220, 204, 0);
+}
+
+.cartInfo{
+    /* border: 1px solid green; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.cartInfo span{
+    /* font-weight: 100; */
+    padding: 5px;
+    color: #70522f;
+}
+
+.cartInfo .cartProduct{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.cartInfo .cartPrice{
+    font-size: 16px;
+    text-align: center;
+}
+
+hr{
+    margin: 15px 0;
+}
+
+.setting{
+    /* border: 1px solid orange; */
+    text-align: center;
+}
+
+.setting h2{
+    /* border: 1px solid red; */
+    font-weight: 700;
+    padding: 10px 0;
+    color: #70522f;
+    text-shadow: 1px 1px 3px #e3dccc;
+}
+
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.category h3{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.category h3:hover{
+    color: #e3dccc;
+}
+
+.wideSetting{
+    /* border: 1px solid red; */
+    height: 60px;
+    margin: 10px 0;
+}
+
+.wideSetting button{
+    background-color: rgba(227, 220, 204, 0);
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 0 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.wideSetting button:click{
+    border: 1px solid #e3dccc;
+}
+
+.wideSetting img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.gallery{
+    /* border: 1px solid green; */
+    height: 1435px;
+    /* overflow: hidden; */
+    overflow: scroll;
+    padding-bottom: 30px;
+}
+
+.contentHolder{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 35px;
+}
+
+
+/* two columns */
+.twoColumn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 35px;
+    column-gap: 10px;
+}
+.twoColumn .itemHolder img{
+    width: 70%;
+    height: 250px;
+    object-fit: cover;
+    /* object-position: center; */
+}
+
+.twoColumn .itemBox .cartButton{
+    width: 30%;
+}
+.twoColumn .tops img{
+    object-position: center 35%;
+}
+.twoColumn .pants img{
+    object-position: center 70%;
+}
+.twoColumn .shoes img{
+    object-position: center 85%;
+}
+/* end of two column settings */
+
+.itemBox{
+   position: relative; 
+   /* border: 1px solid #e3dccc; */
+}
+
+.itemHolder{
+    /* border: 1px solid hotpink; */
+    text-align: center;
+}
+
+.itemHolder img{
+    /* border: 1px solid gray; */
+    height: 280px;
+    width: 225px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.itemHolder span{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.cartButton{
+    background-color: rgba(249, 209, 130, .75);
+    border-radius: 5px;
+    padding: 3px;
+    width: 50%;
+    text-align: center;
+    color: #70522f;
+    box-shadow: 1px 1px 3px 1px #70522f;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.cartButton button{
+    border: none;
+    background-color: rgba(249, 209, 130, .75);
+}
+
+.cartButton:active{
+    background-color: #f6bb42;
+}
+
+.cartButton button i{
+    color: #70522f;
+    font-size: 14px;
+    background-color: rgba(246, 187, 66, 0);
+}
+
+.cartButton span{
+    font-size: 12px;
+}
+
+.infoWindow{
+    width: 80%;
+    height: 500px;
+    background-color: #e3dccc;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    z-index: 15;
+    display: none;
+}
+
+.infoWindow .imageContent{
+    /* border: 1px solid pink; */
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoWindow .imageContent img{
+    width: 90%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.infoWindow .textContent{
+    /* border: 1px solid orange; */
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoWindow .textContent h2{
+    /* border: 1px solid red; */
+    font-weight: 900;
+    font-size: 32px;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px #70522f;
+}
+
+.infoWindow .textContent h3{
+    /* border: 1px solid gray; */
+    text-decoration: underline;
+    font-size: 24px;
+    color:  #f6bb42;
+    text-shadow: 2px 1px 2px #70522f;
+}
+
+.infoWindow .textContent p{
+    /* border: 1px solid yellowgreen; */
+    margin: 20px 0;
+}
+
+footer{
+    /* border: 1px solid lightslategray; */
+    height: 200px;
+    text-align: center;
+    background-color: #e3dccc;
+}
+
+footer .snsIcons{
+    padding-top: 15px;
+    /* border: 1px solid lightskyblue; */
+    display: flex;
+    justify-content: center;
+}
+
+footer .snsIcons a i{
+    /* border: 1px solid burlywood; */
+    margin: 10px;
+    font-size: 50px;
+    color: #70522f;
+}
+
+footer .snsIcons a i:hover{
+    color: #f2a405;
+    font-size: 55px;
+}
+
+footer .menu{
+    /* border: 1px solid darkorange; */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer .menu a{
+    /* border: 1px solid yellow; */
+    margin: 10px;
+    color: #f2a405;
+    text-decoration: none;
+}
+
+footer .menu a:hover{
+    color: #f9d182; 
+    background-color: #70522f;
+}
+
+footer p{
+    color: #70522f;
+}
+
+.top{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    padding: 5px;
+    color: #70522f;
+    border-radius: 10px;
+}
+
+.top button i{
+    font-size: 36px;
+    color: rgba(112, 82, 47, .5);
+    box-shadow: 0px 3px 3px 0px #70522f;
+}
+
+.top button i:hover{
+    color: #f9d182;
+}
+
+
+@media all and (max-width:1024px){
+    .twoColumn .itemHolder img{
+        width: 90%;
+        height: 250px;
+    }
+}
+@media all and (max-width:768px){
+    .contentHolder{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+    }
+    .twoColumn{
+        row-gap: 30px;
+        column-gap: 10px;
+    }
+    .twoColumn .itemHolder img{
+        width: 100%;
+        height: 250px;
+    }
+    .infoWindow{
+        width: 100%;
+        left: 0;
+    }
+    .cartButton{
+        right: 3%;
+        bottom: 15%;
+    }
+}
+
+@media all and (max-width:425px){
+    .contentHolder{
+        display: flex;
+        flex-direction: column;
+    }
+    .itemHolder img{
+        height: 350px;
+        width: 250px;
+    }
+    .infoWindow{
+        overflow: scroll;
+        padding: 15px 0;
+        height: 650px;
+        top: 20%;
+    }
+    .infoWindow .imageContent{
+        width: 100%;
+        height: auto;
+    }
+    .infoWindow .textContent{
+        width: 100%;
+        height: auto;
+    }
+    .cart ul li {
+        width: 100%;
+    }
+    .modal {
+    width: 50%;
+    }
+    .entireModal {
+    height: auto;
+    padding-bottom: 20px;
+    }
+    .userModal{
+    padding-bottom: 30px;
+    }
+    .userWindow {
+    flex-direction: column;
+    align-items: center;
+    }
+    .formBox {
+    padding: 30px;
+    height: auto;
+    width: 100%;
+    }
+}
+
+
+@media all and (max-width:375px){
+    .hamburgerModal{
+        width: 60%;
+    }
+    .cart ul li {
+        display: grid;
+        position: relative;
+    }
+    .cart ul li img{
+        width: 100%;
+    }
+    .cartInfo{
+        width: 100%;
+    }
+    .cart ul li button{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+}
+@media all and (max-width:320px){
+    header{
+        padding: 0 10px;
+        height: 80px;
+        justify-content: center;
+    }
+    header .userIcon{
+        height: 80px;
+        width: auto;
+    }
+    header .logo{
+        height: 80px;
+        width: auto;
+        padding: 0 0 0 30px;
+    }
+    header .logo img{
+        height: 100%;
+    }
+    header .hamburgerMenu{
+        height: 80px;
+        width: auto;
+    }
+    .shoppingCart{
+        padding-right: 50px;
+    }
+    .category{
+       display: grid;
+       row-gap: 10px;
+    }
+    .userModal p a{
+        display: block;
+    }
+}
